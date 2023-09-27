@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "lodash.isequal": "^4.5.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.2.2",
+    "vitest": "^0.34.4"
+  },
+  "scripts": {
+    "test": "vitest"
+  }
+}
