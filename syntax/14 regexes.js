@@ -1,11 +1,12 @@
 /**
- * RegExes let us extract, search, replace, and validate text by use of patterns.
+ * Regular expressions (RegExp objects in JS) let us extract, search, replace,
+ * and validate text by use of _patterns_.
  *
- * Note that the RegExes below aren't the canonical solutions to these problems.
- * Those RegExes would likely be far more complex. However, sometimes simplicity
- * is better (you might not know all the rules for valid email addresses, for
- * example). The RegExes below represent a simplicity-first approach upon which
- * we can build for more complex pattern matching later.
+ * Note that the examples below aren't the canonical solutions to these
+ * problems.  Those RegExps would likely be far more complex. However, sometimes
+ * simplicity is better (you might not know all the rules for valid email
+ * addresses, for example). The RegExps below represent a simplicity-first
+ * approach upon which we can build more complex pattern matching later.
  *
  **/
 
