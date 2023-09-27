@@ -17,7 +17,7 @@ import { emailValidator } from "./example_email_validator.js";
 test("filters bad email addresses", () => {
     expect(
         emailValidator([
-            "rob.gering@snu.edu", // Each of these emails is a "test case"
+            "fake.email@snu.edu", // Each of these emails is a "test case"
             "@meexample.com@com",
             "bademailwithnoatsign",
             "12123412124125151231",
@@ -25,7 +25,7 @@ test("filters bad email addresses", () => {
             "me@example.com",
         ]),
     ).toStrictEqual([
-        "rob.gering@snu.edu",
+        "fake.email@snu.edu",
         "some@example.com",
         "me@example.com",
     ]);
