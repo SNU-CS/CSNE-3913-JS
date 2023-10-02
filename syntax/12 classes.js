@@ -1,9 +1,8 @@
 // Build a simple human class
-export class Human extends Mammal {
+class Human {
     constructor(name, age, isHuman = true) {
-        super();
-        this.name = name;
-        this.age = age;
+        this._name = name;
+        this._age = age;
         this.isHuman = isHuman;
     }
 
@@ -22,22 +21,22 @@ export class Human extends Mammal {
      * accessible by default.
      */
     get name() {
-        return this.name;
+        return this._name;
     }
 
     // setter method for Human.name
     set name(n) {
-        this.name = n;
+        this._name = n;
     }
 
     // getter method for Human.age
     get age() {
-        return this.age;
+        return this._age;
     }
 
     // getter method for Human.age
     set age(n) {
-        this.age = n;
+        this._age = n;
     }
 
     // method that doesn't take arguments
@@ -48,11 +47,15 @@ export class Human extends Mammal {
     // method with argument
     timeTillRetirement(retirementAge) {
         // use of internal property (references this, the instance itself)
-        return retirementAge - this.age;
+        return retirementAge - this._age;
     }
 }
 
+// Instantiate a new Human instance
 const bob = new Human("Bob", 102);
+
+// export our Human class for later use (CommonJS)
+module.exports = Human;
 
 // Advanced example (multiple inheritance)
 class Mammal {
