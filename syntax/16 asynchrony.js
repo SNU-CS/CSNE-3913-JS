@@ -105,3 +105,16 @@ readFilePromise("LICENSE")
  * similarly to synchronous code. As long as we are aware that things may happen
  * out of order, this code is easier to read.
  */
+
+// Bonus: problems in asynchronous code
+async function loadFileBuggy(filePath) {
+    try {
+        // HEISENBUG: Forgot to 'await' readFile
+        const data = fs.readFile(filePath, "utf-8");
+        console.log(data); // Will log a Promise object... sometimes
+    } catch (error) {
+        console.error("Error:", error.message);
+    }
+}
+
+loadFileBuggy("README.md");
