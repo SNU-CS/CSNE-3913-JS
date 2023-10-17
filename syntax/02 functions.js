@@ -59,13 +59,13 @@ function multiplyBy(factor) {
 const double = multiplyBy(2);
 console.log(double(8));
 
-arry = [1, 2, 3, 4, 5];
-output = arry.map(function (i) {
+myArray = [1, 2, 3, 4, 5];
+output = myArray.map(function (i) {
     return i + 1;
 });
 
 // Arrow function (anonymous)
-output = arry.map((i) => {
+output = myArray.map((i) => {
     return i + 1;
 });
 
@@ -74,7 +74,7 @@ const power = (base, power) => {
     base ** power;
 };
 
-// IIFE = Immediately Invoked Function Expression
+// IIFE === Immediately Invoked Function Expression
 //
 // This is a function that calls itself at the point of definition. Note the
 // Wrapping parentheses! This was once used to keep variables bound with the
