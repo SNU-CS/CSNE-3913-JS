@@ -1,9 +1,12 @@
 {
-  "cSpell.words": [
-    "HEISENBUG",
-    "IIFE",
-    "exponentiate",
-    "isequal",
-    "metaprogramming"
-  ]
+    "[javascript][javascriptreact][typescript][typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "cSpell.words": [
+        "HEISENBUG",
+        "IIFE",
+        "exponentiate",
+        "isequal",
+        "metaprogramming"
+    ]
 }

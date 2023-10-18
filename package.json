@@ -4,6 +4,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
+    "prettier": "^3.0.3",
     "vitest": "^0.34.4"
   },
   "scripts": {
