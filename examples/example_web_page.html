@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Manipulation Demo</title>
+    </head>
+    <body>
+        <h1>DOM Manipulation Demo</h1>
+        <h2>DOM Manipulation Demo</h2>
+        <p>This is a simple paragraph.</p>
+        <button id="changeText">Change Paragraph Text</button>
+        <button id="changeColor">Change Paragraph Color</button>
+        <script>
+            // Wait for the document to be fully loaded before manipulating it
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get references to the HTML elements
+                const paragraph = document.querySelector("p");
+                const changeTextButton = document.getElementById("changeText");
+                const changeColorButton =
+                    document.getElementById("changeColor");
+
+                // Function to change the text of the paragraph
+                function changeParagraphText() {
+                    paragraph.textContent = "Text changed!";
+                }
+
+                // Function to change the color of the paragraph
+                function changeParagraphColor() {
+                    paragraph.style.color = "blue";
+                }
+
+                // Add event listeners to the buttons
+                changeTextButton.addEventListener("click", changeParagraphText);
+                changeColorButton.addEventListener(
+                    "click",
+                    changeParagraphColor,
+                );
+            });
+        </script>
+    </body>
+</html>
+
+<!--
+    // Run these commands in the browser console (F12)
+
+    // Change the title (view in the tab)
+    document.title = "New Page Title";
+
+    // Change the background color
+    document.body.style.backgroundColor = "lightblue";
+
+    // Hide an element by its CSS selector
+    document.querySelector("p").style.display = "none";
+
+    // Change an element's content by its CSS selector
+    document.querySelector("h1").textContent = "New Heading Text";
+
+    // Add a new element to the DOM
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a new paragraph.";
+    document.body.appendChild(newParagraph);
+
+    // Redirect the browser to a new URL
+    window.location.href = "https://www.example.com";
+-->
