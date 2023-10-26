@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Color Change on Resize</title>
+        <style>
+            body {
+                transition: background-color 0.2s;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Function to generate a random CSS color value
+            function getRandomColor() {
+                const hex = "0123456789ABCDEF";
+                let color = "#";
+                for (let i = 0; i < 6; i++) {
+                    color += hex[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // Naive debounce implementation (in production we would use Lodash,
+            // which handles all sorts of edge cases we are ignoring here)
+            // Lodash's version: https://docs-lodash.com/v4/debounce/
+            function debounce(func, wait) {
+                let timeout; // closure
+                return function () {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(func, wait);
+                };
+            }
+
+            // Event listener for window resize without debounce function
+            // window.addEventListener("resize", () => {
+            //     document.body.style.backgroundColor = getRandomColor();
+            // });
+
+            // Debounced version
+            window.addEventListener(
+                "resize",
+                debounce(() => {
+                    document.body.style.backgroundColor = getRandomColor();
+                }, 500),
+            );
+        </script>
+    </body>
+</html>
